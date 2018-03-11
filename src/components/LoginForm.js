@@ -20,7 +20,8 @@ export default class LoginForm extends Component {
   }
 
   login(loginInfo) {
-    url = 'http://localhost:5000/login'
+    // url = 'http://localhost:5000/login'
+    url = 'http://smartcloud-backend.herokuapp.com/login'
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(loginInfo)

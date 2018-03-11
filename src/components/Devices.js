@@ -4,6 +4,7 @@ import {
   FlatList,
   View,
   Alert,
+  Button,
   Text,
   StyleSheet
 } from 'react-native';
@@ -27,6 +28,7 @@ export default class Devices extends Component {
 
   getUserDevices = async (user_id) => {
     url = 'http://localhost:5000/api/v1.0/users_devices/' + user_id
+    url = 'http://smartcloud-backend.herokuapp.com/api/v1.0/users_devices/' + user_id
     const response = await fetch(url)
     const json = await response.json()
     this.setState({devices: json.devices})
@@ -51,6 +53,9 @@ export default class Devices extends Component {
         ItemSeparatorComponent={({ highlighted }) =>
         <Separator isHidden={highlighted} />}
         />
+        <Button title='Add Device' onPress={() =>
+          navigate('AddDevice')
+        } />
       </ScrollView>
     );
   }

@@ -29,7 +29,7 @@ export default class CloudControl extends Component {
         <Text>Device Name: {device.name}</Text>
         <Text>Device id: {device.particle_id}</Text>
         <Text>Last Connected: {device.last_connected}</Text>
-        <Button title='Set Color & Pattern' onPress={() =>
+        <Button title='Cloud Control' onPress={() =>
           this.props.navigation.navigate('CloudControl', {device: device})
         } />
       </View>
