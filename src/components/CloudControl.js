@@ -61,8 +61,9 @@ export default class CloudControl extends Component {
   }
 
   setCloudPattern(pattern, particle_id) {
-    url = 'https://smartcloud-backend.herokuapp.com/api/v1.0/devices/' + particle_id + '/set_pattern/' + pattern
+
     // url = 'http://localhost:5000/api/v1.0/devices/' + particle_id + '/set_pattern/' + pattern
+    url = 'https://smartcloud-backend.herokuapp.com/api/v1.0/devices/' + particle_id + '/set_pattern/' + pattern
     fetch(url, {
       method: 'GET'
     }).then((data) => {
@@ -72,8 +73,9 @@ export default class CloudControl extends Component {
   }
 
   setCloudColor(colorStr, particle_id) {
-    url = 'https://smartcloud-backend.herokuapp.com/api/v1.0/devices/' + particle_id + '/set_color/' + colorStr
+
     // url = 'http://localhost:5000/api/v1.0/devices/' + particle_id + '/set_color/' + colorStr
+    url = 'https://smartcloud-backend.herokuapp.com/api/v1.0/devices/' + particle_id + '/set_color/' + colorStr
     fetch(url, {
       method: 'GET'
     }).then((data) => {

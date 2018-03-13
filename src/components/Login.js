@@ -14,8 +14,6 @@ export default class Login extends Component {
     return (
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <View style={styles.loginContainer}>
-          <Image resizeMode="contain" style={styles.logo}
-          source={require('../images/room.jpeg')} />
         </View>
         <View style={styles.formContainer}>
           <LoginForm navigate={this.props.navigation.navigate} />
@@ -29,7 +27,6 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'black',
     },
     loginContainer:{
         alignItems: 'center',
