@@ -27,7 +27,6 @@ export default class Devices extends Component {
   }
 
   getUserDevices = async (user_id) => {
-
     url = 'http://smartcloud-backend.herokuapp.com/api/v1.0/users_devices/' + user_id
     url = 'http://localhost:5000/api/v1.0/users_devices/' + user_id
     const response = await fetch(url)

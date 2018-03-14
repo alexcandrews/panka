@@ -19,8 +19,7 @@ export default class LoginForm extends Component {
     }
   }
 
-  login(loginInfo) {
-
+  login(loginInfo, navigate) {
     url = 'http://smartcloud-backend.herokuapp.com/login'
     url = 'http://localhost:5000/login'
 
@@ -30,9 +29,13 @@ export default class LoginForm extends Component {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      args: JSON.stringify({
-        'email': 'email'
+      body: JSON.stringify({
+        loginInfo
       }),
+    }).then((response) => response.json())
+    .then((responseJson) => {
+      user_id = responseJson['user_id']
+      this.props.navigate('Devices', {'user_id': user_id})
     });
   }
 
